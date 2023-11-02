@@ -22,10 +22,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-		<groupId>commons-codec</groupId>
-		<artifactId>commons-codec</artifactId>
-		<version>1.11</version>
-	</dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>javazoom</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
     </dependencies>
     
     <build>
@@ -43,12 +49,12 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-				<transformers>
-					<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-						<mainClass>CSE306.App</mainClass>
-					</transformer>
-				</transformers>
-			</configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>CSE306.App</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
